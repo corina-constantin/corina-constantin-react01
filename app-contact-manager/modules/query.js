@@ -14,7 +14,10 @@ export const findContacts = (needle = 'query') => {
       return haystack;
     }, '');
 
-    if (haystack.includes(needle)) {
+    //case insensitive search + spaces search
+    if (
+      haystack.toLowerCase().includes(needle.toLowerCase().replace(/\s+/g, ''))
+    ) {
       return true;
     }
 

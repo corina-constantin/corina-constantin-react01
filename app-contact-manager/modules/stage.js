@@ -4,6 +4,10 @@ import createMessage from './message.js';
 
 const stage = document.querySelector('.stage');
 
+export const clearStage = () => {
+  stage.innerHTML = '';
+};
+
 //cancel action button
 
 stage.addEventListener('click', (event) => {
@@ -16,7 +20,8 @@ stage.addEventListener('click', (event) => {
     return;
   }
 
-  stage.innerHTML = '';
+  clearStage();
+  //stage.innerHTML = '';
 });
 
 //create contact
@@ -41,6 +46,7 @@ stage.addEventListener('submit', (event) => {
   createContact(contact);
   addMessage(createMessage(`Contact ${name.value} ${surname.value} created.`));
 
-  stage.innerHTML = ''; //refactorizam cu clear stage
+  // stage.innerHTML = ''; //refactorizam cu clear stage
+  clearStage();
 });
 export default stage;
