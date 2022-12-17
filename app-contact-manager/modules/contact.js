@@ -25,7 +25,7 @@ class="btn btn-secondary mx-2 edit-contact-button"
 
 <button title="Add Pet"
 type="button"
-class="btn btn-secondary"
+class="btn btn-secondary add-pet-button"
 >Add Pet</button>
   `;
 
