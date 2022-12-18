@@ -31,3 +31,69 @@ const person = {
     },
   ],
 };
+
+console.warn(`
+1. Folosind metoda map pe arrayul skills, returneaza si afiseaza
+in consola un array in care fiecare consoana este scrisa cu
+litera mare (vocalele nu)
+`);
+
+const vowels = ['a', 'e', 'i', 'o', 'u'];
+const arr1 = person.skills.map((skill) => {
+  const skillLetters = skill.split('');
+  // 'teststring'.split('') ==>  ['t', 'e', 's', 't', 's', 't', 'r', 'i', 'n', 'g']
+
+  const updatedLetter = skillLetters.map((letter) => {
+    if (vowels.includes(letter.toLowerCase())) {
+      return letter;
+    } else {
+      return letter.toUpperCase();
+    }
+  });
+
+  return updatedLetter.join('');
+});
+
+console.log(arr1);
+
+console.warn(`
+2. Folosind map pe arrayul friends, returneaza un array in care
+fiecare pozitie contine propozitia
+“Ma numesc {name} {surname} si am {age} ani.”
+`);
+
+const arr2 = person.friends.map((friend) => {
+  const { name, surname, age } = friend;
+
+  return `Ma numesc ${name} ${surname} si am ${age} ani.`;
+});
+
+console.log(arr2);
+
+console.warn(`
+5. Folosind metoda map pe arrayul skills, returneaza un array
+care contine cuvintele cu prima si ultima litera mari.
+`);
+const arr5 = person.skills.map((skill) => {
+  return skill
+    .split('')
+    .map((letter, index, letters) => {
+      if (index === 0 || index === letters.length - 1) {
+        return letter.toUpperCase();
+      }
+      return letter;
+    })
+    .join('');
+});
+
+console.log(arr5);
+
+console.warn(`
+6. Folosind metoda map pe arrayul skills, returneaza un array
+care contine cuvintele inversate (exemplu: lmth)
+`);
+
+const arr6 = person.skills.map((skill) => {
+  return skill.split('').reverse().join('');
+});
+console.log(arr6);
