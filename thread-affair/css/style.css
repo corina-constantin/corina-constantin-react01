@@ -644,9 +644,16 @@ a {
   align-items: center;
   color: #fff;
   display: flex;
+  flex-wrap:wrap;
   min-height: 150px;
   flex-wrap: wrap;
 }
+
+.home-newsletter .form-message{
+  width:100%;
+  text-align:center;
+  }
+
 
 .home-newsletter [for='field-newsletter'] {
   font-size: 14px;
