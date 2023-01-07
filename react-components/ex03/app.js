@@ -77,3 +77,43 @@ const message2 = Object.values(person.friends).reduce(
   '',
 );
 console.log(message2);
+
+console.warn(`
+4. Prin aceeasi metoda, afiseaza o lista cu numele complet al prietenilor (console.log / linie).
+`);
+
+Object.values(person.friends).forEach(({ name, surname }) => {
+  console.log(`${name} ${surname}`);
+});
+
+console.warn(`
+5. Afiseaza propozitia: “Prietenii mei sunt Larry Larryson, Steven Stevenson si Carol Carolson.” folosind Object.values()
+`);
+
+const message5 = Object.values(person.friends).reduce(
+  (message5, { name, surname }, index, friends) => {
+    let punctuation = ', ';
+    if (index === friends.length - 1) {
+      punctuation = '.';
+    }
+    message5 += `${name} ${surname}${punctuation}`;
+    return message5;
+  },
+  `Prietenii mei sunt: `,
+);
+
+console.log(message5);
+
+console.warn(`
+6. In mod similar, afiseaza propozitia  “Larry are xx ani. Steven are …”
+`);
+
+const message6 = Object.values(person.friends).reduce(
+  (message6, { name, age }) => {
+    message6 += `${name} are ${age} ani. `;
+    return message6;
+  },
+  '',
+);
+
+console.log(message6);
