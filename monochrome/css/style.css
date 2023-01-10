@@ -647,6 +647,21 @@ aside img {
   margin-left: 0;
 }
 
+
+.footer-sign-up-newsletter button .loader{
+  animation: loading 2s linear infinite;
+}
+
+@keyframes loading {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+
 .footer-nav-style nav li {
   margin-bottom: 15px;
 }
