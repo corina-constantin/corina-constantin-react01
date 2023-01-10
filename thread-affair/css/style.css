@@ -649,11 +649,6 @@ a {
   flex-wrap: wrap;
 }
 
-.home-newsletter .form-message{
-  width:100%;
-  text-align:center;
-  }
-
 
 .home-newsletter [for='field-newsletter'] {
   font-size: 14px;
