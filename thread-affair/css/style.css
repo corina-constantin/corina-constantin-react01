@@ -311,6 +311,11 @@ a {
   margin-right: 10px;
 }
 
+.header-counters{
+  display: flex;
+  gap: 16px;
+}
+
 .header-counter {
   position: relative;
   margin-top: 6px;
@@ -548,7 +553,7 @@ a {
 }
 
 .product-tile .product-control:hover,
-.product-tile .product-control.active {
+.product-tile .product-control.added {
   color: #fff;
   background-color: #ff6b6b;
 }
